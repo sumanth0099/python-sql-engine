@@ -7,7 +7,7 @@ It simulates core database functionalities like **SELECT**, **WHERE**, and **COU
 
 ## Overview
 
-This project demonstrates how basic SQL query processing works — including **parsing**, **filtering**, **projection**, and **aggregation** — without using external database systems.
+This project demonstrates how basic SQL query processing works which includes **parsing**, **filtering**, **projection**, and **aggregation**  without using external database systems.
 
 It includes:
 
