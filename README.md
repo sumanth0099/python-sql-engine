@@ -104,15 +104,17 @@ Eve 29
 
 ## Example CSV Data
 
-`employees.csv`:
+`sample.csv`:
 
-id,name,age,department,salary,country  
-1,Alice,30,Engineering,70000,USA  
-2,Bob,25,Marketing,50000,UK  
-3,Charlie,35,Engineering,80000,USA  
-4,David,28,Marketing,52000,Canada  
-5,Eve,29,Engineering,75000,Australia  
-6,Frank,32,HR,60000,India  
+product_id,product_name,category,price,stock
+101,Laptop,Electronics,1200,15
+102,Keyboard,Electronics,45,100
+103,Chair,Furniture,85,50
+104,Desk,Furniture,150,20
+105,Pen,Stationery,1,500
+106,Notebook,Stationery,3,300
+107,Headphones,Electronics,90,40
+ 
 
 ---
 
@@ -121,44 +123,48 @@ id,name,age,department,salary,country
 ### 1. SELECT *
 
 ```
-SELECT * FROM employees;
+SELECT * FROM sample;
 ```
 
 ### 2. SELECT specific columns
 
 ```
-SELECT name, age FROM employees;
+SELECT product_id,product_name FROM employees;
 ```
 
 Output:
 
-name age  
-Alice 30  
-Bob 25  
+product_id  product_name
+101         Laptop
+102         Keyboard
+103         Chair
+104         Desk
+105         Pen
+106         Notebook
+107         Headphones
 ...
 
 ### 3. WHERE filtering
 
 ```
-SELECT name, department FROM employees WHERE country = 'USA';
+  SELECT product_id, category  FROM sample  WHERE product_name = 'Chair';    
 ```
 
 Output:
 
-name department  
-Alice Engineering  
-Charlie Engineering  
+product_id  category 
+103         Furniture 
 
 ### 4. COUNT()
 
 ```
-SELECT COUNT(*) FROM employees WHERE department = 'Engineering';
+  SELECT count(*) from sample;    
 ```
 
 Output:
 
 count  
-3  
+7  
 
 ---
 
@@ -192,7 +198,7 @@ count
 ### Step 1: Place your CSV file(s) into the project folder
 
 project/  
-│── employees.csv  
+│── sample.csv  
 │── repl.py  
 
 ### Step 2: Run the REPL
@@ -203,13 +209,12 @@ python repl.py
 
 ### Step 3: Enter CSV filename when prompted
 
-Enter CSV filename to load: `employees.csv`
+Enter CSV filename to load: `sample.csv`
 
 ### Step 4: Start typing SQL queries
 
-sql> `SELECT * FROM employees;`  
-sql> `SELECT COUNT(*) FROM employees;`  
-sql> `SELECT name FROM employees WHERE age > 30;`  
+sql> `SELECT * FROM sample;`  
+sql> `SELECT COUNT(*) FROM sample;`  
 
 ---
 
@@ -260,10 +265,8 @@ The system displays errors like:
 ## examples/ Folder
 
 examples/  
-│── sample_employees.csv → Example CSV file  
-│── queries.txt → Sample SQL queries  
-│── walkthrough.md → Step-by-step instructions  
-
+│── people.csv → Example CSV file  
+│── products.csv → Example CSV file  
 Purpose:
 - Provides ready-to-run CSVs  
 - Helps instructors quickly test the engine  
