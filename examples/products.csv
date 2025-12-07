@@ -1,0 +1,8 @@
+product_id,product_name,category,price,stock
+101,Laptop,Electronics,1200,15
+102,Keyboard,Electronics,45,100
+103,Chair,Furniture,85,50
+104,Desk,Furniture,150,20
+105,Pen,Stationery,1,500
+106,Notebook,Stationery,3,300
+107,Headphones,Electronics,90,40

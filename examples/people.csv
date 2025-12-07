@@ -1,0 +1,5 @@
+id,name,age,country
+1,Alice,30,USA
+2,Bob,25,UK
+3,Carol,27,USA
+4,Dave,,Canada
